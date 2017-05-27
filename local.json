@@ -1,0 +1,6 @@
+{
+    "username": "",
+    "password": "",
+    "sleepDelayMS": "300",
+    "csv": "./csv/test.csv"
+}

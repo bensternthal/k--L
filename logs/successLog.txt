@@ -1,4 +1,0 @@
-Success: https://support.mozilla.org/products/thunderbird, Thunderbird Help, Thunderbird Support
-Success: https://support.mozilla.org/en-US/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  New in Thunderbird 24 - Mozilla Support Community
-Success: https://support.mozilla.org/products/thunderbird, Thunderbird Help, Thunderbird Support
-Success: https://support.mozilla.org/en-US/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  New in Thunderbird 24 - Mozilla Support Community

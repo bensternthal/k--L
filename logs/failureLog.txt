@@ -1,0 +1,24 @@
+Failure: https://support.mozilla.org/kb/plugin-crash-reports, Plugin Crash Reports TB | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/remote-content-in-messages, Remote Content in Messages | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/how-subscribe-news-feeds-and-blogs, How to Subscribe to News Feeds and Blogs | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/products/thunderbird/how, How To | Thunderbird Help, Thunderbird basics
+Failure: https://support.mozilla.org/kb/filelink-large-attachments, Filelink for Large Attachments | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/ignore-threads, Ignoring threads | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-52, New in Thunderbird 52.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-45, New in Thunderbird 45.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-38, New in Thunderbird 38.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-31, New in Thunderbird 31.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/thunderbird-calendar-integration, Integration into Thunderbird | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/plugin-crash-reports, Plugin Crash Reports TB | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/remote-content-in-messages, Remote Content in Messages | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/how-subscribe-news-feeds-and-blogs, How to Subscribe to News Feeds and Blogs | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/products/thunderbird/how, How To | Thunderbird Help, Thunderbird basics
+Failure: https://support.mozilla.org/kb/filelink-large-attachments, Filelink for Large Attachments | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/ignore-threads, Ignoring threads | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-52, New in Thunderbird 52.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-45, New in Thunderbird 45.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-38, New in Thunderbird 38.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-31, New in Thunderbird 31.0 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  Page Not Found - Mozilla Support Community
+Failure: https://support.mozilla.org/kb/thunderbird-calendar-integration, Integration into Thunderbird | Thunderbird Help,  Page Not Found - Mozilla Support Community

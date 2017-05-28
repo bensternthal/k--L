@@ -2,5 +2,5 @@
     "username": "",
     "password": "",
     "sleepDelayMS": "300",
-    "csv": "./csv/test.csv"
+    "csv": "./csv/test1.csv"
 }

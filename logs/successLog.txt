@@ -1,16 +1,4 @@
-Success: https://support.mozilla.org/security-error-ar , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/security-error-de , https://support.mozilla.org/t5/Probleme-beheben/Wie-Sie-die-Fehlermeldung-SEC-ERROR-UNKNOWN-ISSUER-auf-sicheren/ta-p/37512
-Success: https://support.mozilla.org/security-error-fi , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/security-error-sk , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/security-error-tr , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/security-error-vi , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/kb/firefox-osx-bg , https://support.mozilla.org/t5/Fix-slowness-crashing-error/How-to-troubleshoot-the-error-code-quot-SEC-ERROR-UNKNOWN-ISSUER/ta-p/35758
-Success: https://support.mozilla.org/kb/tab-groups-removal-cy , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-el , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-en-GB , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-en-US , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-en-ZA , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-eo , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-et , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-eu , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
-Success: https://support.mozilla.org/kb/tab-groups-removal-fa , https://support.mozilla.org/t5/Basic-Browsing/Tab-Groups-feature-discontinued/ta-p/28613
+Success: https://support.mozilla.org/products/thunderbird, Thunderbird Help, Thunderbird Support
+Success: https://support.mozilla.org/en-US/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  New in Thunderbird 24 - Mozilla Support Community
+Success: https://support.mozilla.org/products/thunderbird, Thunderbird Help, Thunderbird Support
+Success: https://support.mozilla.org/en-US/kb/new-thunderbird-24, New in Thunderbird 24 | Thunderbird Help,  New in Thunderbird 24 - Mozilla Support Community

@@ -2,7 +2,7 @@ const conf = require('./lib/conf');
 const fs = require('fs');
 const parse = require('csv-parse');
 const request = require('request');
-const sleep = require('system-sleep');
+// const sleep = require('system-sleep');
 const cheerio = require('cheerio');
 const chalk = require('chalk');
 const async = require('async');
@@ -12,7 +12,7 @@ const csvFile = conf.get('csv');
 const failureLog = './logs/failureLog.txt';
 const requestErrorLog = './logs/requestErrorLog.txt';
 const successLog = './logs/successLog.txt';
-const sleepDelayMS = conf.get('sleepDelayMS');
+// const sleepDelayMS = conf.get('sleepDelayMS');
 let successCount = 0;
 let failureCount = 0;
 let errorCount = 0;
@@ -40,7 +40,7 @@ let requestOptions = {
 };
 
 
-/* Receives file and passes each row to async functions to do all the things */
+/* Receives file and passes each row to sync functions to do all the things.. in sync*/
 let parser = parse({delimiter: ','}, function(err, data) {
     if (err) {
         console.error('Error: ', err);
@@ -48,6 +48,7 @@ let parser = parse({delimiter: ','}, function(err, data) {
     }
 
     async.eachSeries(data, function(row, callback2) {
+        // These are not csv files, it's one url per line.
         let url = row[0];
 
         async.series([
@@ -103,9 +104,10 @@ function getKitsuneTitle(url, callback) {
 }
 
 
-/* Requests URL From Lithium, Stores Title From Response */
+/* Requests URL From Lithium, Stores Title From Response  TODO: combine
+the two get functions into one */
 function getLithiumTitle(url, callback) {
-    // Append path from url to Lithium domain
+    // Get and Append path from url to Lithium domain
     let parsedURL = urlUtils.parse(url);
     requestOptions.url = ('https://hwsfp35778.lithium.com' + parsedURL.path);
 
@@ -164,7 +166,7 @@ function logResult(url, callback) {
     callback();
 }
 
-/* Blocking function to write to file. */
+/* Sync write to file. */
 function writeToFile(file, text) {
     fs.appendFileSync(file, text + '\n');
 }

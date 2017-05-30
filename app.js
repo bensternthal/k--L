@@ -2,17 +2,17 @@ const conf = require('./lib/conf');
 const fs = require('fs');
 const parse = require('csv-parse');
 const request = require('request');
-// const sleep = require('system-sleep');
+const cmd = require('commander');
+const sleep = require('system-sleep');
 const cheerio = require('cheerio');
 const chalk = require('chalk');
 const async = require('async');
 const urlUtils = require('url');
 
-const csvFile = conf.get('csv');
 const failureLog = './logs/failureLog.txt';
 const requestErrorLog = './logs/requestErrorLog.txt';
 const successLog = './logs/successLog.txt';
-// const sleepDelayMS = conf.get('sleepDelayMS');
+const sleepDelayMS = conf.get('sleepDelayMS');
 let successCount = 0;
 let failureCount = 0;
 let errorCount = 0;
@@ -21,26 +21,30 @@ let kitsuneTitle = '';
 let lithiumTitle = '';
 
 
+/* Command Line Options For Path To CSV File & Locale */
+cmd
+  .option('-c, --csv <csv>', 'Path to csv file')
+  .option('-l, --locale <locale>', 'Locale code "en" ')
+  .parse(process.argv);
+
+
 /* Diable SSL Checking GLobally */
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
-/* Options for HTTP Get Request, remove Auth if you are not testing stage */
+/* Options for HTTP Get Request, Accept-Language passed via command line option. */
 let requestOptions = {
     auth: {
         username: conf.get('username'),
         password: conf.get('password'),
     },
-    headers: [
-        {
-            name: 'Accept-Language',
-            value: 'en',
-        },
-    ],
+    headers: {
+            'Accept-Language': cmd.locale,
+    },
     followAllRedirects: 'true',
 };
 
 
-/* Receives file and passes each row to sync functions to do all the things.. in sync*/
+/* Receives file and passes each row to sync functions to do all the things.. nsync */
 let parser = parse({delimiter: ','}, function(err, data) {
     if (err) {
         console.error('Error: ', err);
@@ -48,7 +52,7 @@ let parser = parse({delimiter: ','}, function(err, data) {
     }
 
     async.eachSeries(data, function(row, callback2) {
-        // These are not csv files, it's one url per line.
+        // These are not csv files, it's one url per line but whatever.
         let url = row[0];
 
         async.series([
@@ -105,7 +109,7 @@ function getKitsuneTitle(url, callback) {
 
 
 /* Requests URL From Lithium, Stores Title From Response  TODO: combine
-the two get functions into one */
+the two getTitle functions into one */
 function getLithiumTitle(url, callback) {
     // Get and Append path from url to Lithium domain
     let parsedURL = urlUtils.parse(url);
@@ -142,10 +146,12 @@ function logResult(url, callback) {
 
     if ((lithiumTitle.search(needle)) != -1) {
         result = 'success';
+        // comment out if you like cats and your terminal supports emoji
         // process.stdout.write(' 😻 ');
         process.stdout.write(' . ');
     } else {
         result = 'failure';
+        // comment out if you like cats and your terminal supports emoji
         // process.stdout.write(' 😾 ');
         process.stdout.write(' X ');
     }
@@ -180,5 +186,14 @@ function displaySummary() {
 }
 
 
-// Read CSV File, kicks off everything
-fs.createReadStream(csvFile).pipe(parser);
+/* Parse command line options */
+if ((typeof cmd.csv === 'undefined') || (typeof cmd.locale === 'undefined')) {
+   console.error('Error: CSV & Locale Must Both Be Specified, run "node app.js --help" for more information.');
+   process.exit(1);
+} else {
+    // Read CSV File from commander option, kicks off everything
+    fs.createReadStream(cmd.csv).pipe(parser);
+}
+
+
+

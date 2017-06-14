@@ -52,6 +52,7 @@ let parser = parse({delimiter: ','}, function(err, data) {
         return;
     }
 
+    /* TODO: Truncate Files Somewhere */
     async.eachSeries(data, function(row, callback2) {
         // These are not csv files, it's one url per line but whatever.
         let url = row[0];
@@ -96,11 +97,13 @@ function getKitsuneTitle(url, callback) {
         } else {
             /* Parse Body & Store Title */
             let $ = cheerio.load(body);
-            kitsuneTitle = $('title').text();
+            kitsuneTitle = $('h1.title').text();
 
             if (response.statusCode == '404') {
                 four0fourCount++;
-                writeToFile(requestErrorLog, 'Error 404: ' + requestOptions.url);
+                // Manually set title
+                kitsuneTitle = 'Page Not Found';
+                writeToFile(requestErrorLog, 'Kitsune Error 404: ' + requestOptions.url);
             }
 
             callback();
@@ -122,11 +125,11 @@ function getLithiumTitle(url, callback) {
         } else {
             /* Parse Body & Store Title */
             let $ = cheerio.load(body);
-            lithiumTitle = $('title').text();
+            lithiumTitle = $('h1.PageTitle').text();
 
             if (response.statusCode == 404) {
                 four0fourCount++;
-                writeToFile(requestErrorLog, 'Error 404: ' + requestOptions.url);
+                writeToFile(requestErrorLog, 'Lithium Error 404: ' + requestOptions.url);
             }
 
             callback();
@@ -139,13 +142,14 @@ function getLithiumTitle(url, callback) {
 function logResult(url, callback) {
     let result;
 
-    /*  Kitsune Titles Follow this format
+    /* Below not used if we are looking at H1
+     * Kitsune Titles Follow this format
      *  `New in Thunderbird 52.0 | Thunderbird Help`
      *  we need to remove everything after the `|` to see if the same title exists.
      */
-     let needle = kitsuneTitle.substr(0, kitsuneTitle.lastIndexOf('\|'));
+     // let needle = kitsuneTitle.substr(0, kitsuneTitle.lastIndexOf('\|'));
 
-    if ((lithiumTitle.search(needle)) != -1) {
+    if ((lithiumTitle.search(kitsuneTitle)) != -1) {
         result = 'success';
         // comment out if you like cats and your terminal supports emoji
         // process.stdout.write(' 😻 ');
@@ -192,6 +196,11 @@ if ((typeof cmd.csv === 'undefined') || (typeof cmd.locale === 'undefined')) {
    console.error('Error: CSV & Locale Must Both Be Specified, run "node app.js --help" for more information.');
    process.exit(1);
 } else {
+    // Truncate/Clear log files from any previous runs.
+    fs.truncateSync(failureLog, 0);
+    fs.truncateSync(requestErrorLog, 0);
+    fs.truncateSync(successLog, 0);
+
     // Read CSV File from commander option, kicks off everything
     fs.createReadStream(cmd.csv).pipe(parser);
 }

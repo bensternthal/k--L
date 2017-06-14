@@ -11,6 +11,8 @@
 1. create `./logs` directory for log output
 1. npm install
 1. copy local.json.dist -> local.json, populate values if needed.
+	1. `username` and `password` are optional and only used for lithium URL.
+	1. `lithiumURL` is required.
 1. run with `node app.js -c ./csv/test1.csv -l en`
 1. -c = path to csv file/list of URLs
 1. -l = locale

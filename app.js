@@ -13,6 +13,7 @@ const failureLog = './logs/failureLog.txt';
 const requestErrorLog = './logs/requestErrorLog.txt';
 const successLog = './logs/successLog.txt';
 const sleepDelayMS = conf.get('sleepDelayMS');
+const lithiumURL = conf.get('lithiumURL');
 let successCount = 0;
 let failureCount = 0;
 let errorCount = 0;
@@ -113,7 +114,7 @@ the two getTitle functions into one */
 function getLithiumTitle(url, callback) {
     // Get and Append path from url to Lithium domain
     let parsedURL = urlUtils.parse(url);
-    requestOptions.url = ('https://hwsfp35778.lithium.com' + parsedURL.path);
+    requestOptions.url = ( lithiumURL + parsedURL.path);
 
     request(requestOptions, function(error, response, body) {
         if (error) {

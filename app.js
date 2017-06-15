@@ -149,7 +149,7 @@ function logResult(url, callback) {
      */
      // let needle = kitsuneTitle.substr(0, kitsuneTitle.lastIndexOf('\|'));
 
-    if ((lithiumTitle.search(kitsuneTitle)) != -1) {
+    if ((lithiumTitle.indexOf(kitsuneTitle)) != -1) {
         result = 'success';
         // comment out if you like cats and your terminal supports emoji
         // process.stdout.write(' 😻 ');
